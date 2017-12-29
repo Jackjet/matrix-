@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        body {
+            background: #65686A;
+        }
+
+        .layout {
+            overflow: hidden;
+        }
+
+        /*condition*/
+        .condition, .place {
+            margin: 10px auto;
+            border: 1px solid black;
+        }
+
+        .condition ul {
+            padding: 0 10px;
+        }
+
+        .condition ul li {
+            padding: 5px 0;
+            *zoom: 1;
+        }
+
+        .condition ul li:before {
+            display: table;
+            content: " ";
+        }
+
+        .condition ul li:after {
+            display: table;
+            content: " ";
+            clear: both;
+        }
+
+        .condition ul li > p {
+            float: left;
+            width: 180px;
+            margin: 0 10px;
+        }
+
+        .condition ul li > p > input {
+            width: 50px;
+        }
+
+        .condition ul li > p > span {
+            padding-left: 10px;
+        }
+
+        /*place*/
+        .place {
+            position: relative;
+            width: 1200px;
+            height: 500px;
+        }
+
+        .place .boxs {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+        }
+
+        .place .boxs > div {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            line-height: 15px;
+            font-size: 12px;
+            color: #fff;
+            text-align: center;
+            background: #000;
+        }
+
+        .place .boxs .inner1 {
+            left: 0;
+            top: 0;
+        }
+
+        .place .boxs .inner2 {
+            right: 0;
+            top: 0;
+        }
+
+        .place .boxs .inner3 {
+            left: 0;
+            bottom: 0;
+        }
+
+        .place .boxs .inner4 {
+            right: 0;
+            bottom: 0;
+        }
+
+        .box1 {
+            left: 111px;
+            top: 111px;
+            background: #DD5044;
+        }
+
+        .box2 {
+            left: 500px;
+            top: 111px;
+            background: #1BA261;
+        }
+
+        .box3 {
+            left: 800px;
+            top: 111px;
+            background: #FFCE44;
+        }
+    </style>
+</head>
+<body>
+<div class="layout">
+    <div class="condition">
+        <ul class="matrix2D">
+            <li>
+
+            </li>
+        </ul>
+        <ul class="matrix3D">
+            <li class="translateX">
+                <div>平移:</div>
+                <p><input type="text" class="variant"><span>translateX平移</span></p>
+                <p><input type="text" class="num"><span>序列顺序</span></p>
+            </li>
+            <li class="translateY">
+                <p><input type="text" class="variant"><span>translateY平移</span></p>
+                <p><input type="text" class="num"><span>序列顺序</span></p>
+            </li>
+            <li class="translateZ">
+                <p><input type="text" class="variant"><span>translateZ平移</span></p>
+                <p><input type="text" class="num"><span>序列顺序</span></p>
+            </li>
+
+            <li class="scaleX">
+                <div>缩放:</div>
+                <p><input type="text" class="variant"><span>scaleX缩放</span></p>
+                <p><input type="text" class="num"><span>序列顺序</span></p>
+            </li>
+            <li class="scaleY">
+                <p><input type="text" class="variant"><span>scaleY缩放</span></p>
+                <p><input type="text" class="num"><span>序列顺序</span></p>
+            </li>
+            <li class="scaleZ">
+                <p><input type="text" class="variant"><span>scaleZ缩放</span></p>
+                <p><input type="text" class="num"><span>序列顺序</span></p>
+            </li>
+
+            <li class="rotateX">
+                <div>旋转:</div>
+                <p><input type="text" class="variant"><span>rotateX旋转</span></p>
+                <p><input type="text" class="num"><span>序列顺序</span></p>
+            </li>
+            <li class="rotateY">
+                <p><input type="text" class="variant"><span>rotateY旋转</span></p>
+                <p><input type="text" class="num"><span>序列顺序</span></p>
+            </li>
+            <li class="rotateZ">
+                <p><input type="text" class="variant"><span>rotateZ旋转</span></p>
+                <p><input type="text" class="num"><span>序列顺序</span></p>
+            </li>
+
+            <li>
+                <p><input type="text" class="boxA"><span>选择方块</span></p>
+                <button class="go2">确定</button>
+            </li>
+        </ul>
+    </div>
+    <div class="place">
+        <div class="boxs box1">
+            <div class="inner1">1</div>
+            <div class="inner2">2</div>
+            <div class="inner3">3</div>
+            <div class="inner4">4</div>
+        </div>
+        <div class="boxs box2">
+            <div class="inner1">1</div>
+            <div class="inner2">2</div>
+            <div class="inner3">3</div>
+            <div class="inner4">4</div>
+        </div>
+        <div class="boxs box3">
+            <div class="inner1">1</div>
+            <div class="inner2">2</div>
+            <div class="inner3">3</div>
+            <div class="inner4">4</div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="jquery3.2.1.min.js"></script>
+<script src="matrix_1.js"></script>
+</html>
